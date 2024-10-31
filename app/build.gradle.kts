@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-parcelize")
     id("androidx.navigation.safeargs")
+    id("kotlin-kapt")
 }
 
 android {
@@ -42,13 +43,27 @@ android {
 
 
 dependencies {
-    // Coroutines for asynchronous network requests
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
+    //loading button
+    implementation ("br.com.simplepass:loading-button-android:2.2.0")
 
-    // Retrofit and Gson converter dependencies
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    //Glide
+    implementation ("com.github.bumptech.glide:glide:4.13.")
+
+    //circular image
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+
+    //viewpager2 indicator
+    implementation ("io.github.vejei.viewpagerindicator:viewpagerindicator:1.0.0-alpha.1")
+
+    //stepView
+    implementation ("com.shuhart.stepview:stepview:1.5.1")
+
+    //Android Ktx
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.4.2")
+
+    //Dagger hilt
+    implementation ("com.google.dagger:hilt-android:2.38.1")
+    kapt ("com.google.dagger:hilt-compiler:2.38.1")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
