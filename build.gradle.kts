@@ -8,12 +8,12 @@ buildscript {
     repositories {
         mavenCentral()
         google()
+        maven { url = uri("https://jitpack.io") }
     }
     dependencies {
-        classpath("com.google.dagger:hilt-android-gradle-plugin:2.40.1")
-        classpath("com.google.gms:google-services:4.3.13")
+        classpath(libs.hilt.android.gradle.plugin)
+        classpath(libs.google.services)
 
-        val nav_version = "2.8.3"
-        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
+        classpath(libs.androidx.navigation.safe.args.gradle.plugin)
     }
 }

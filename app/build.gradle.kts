@@ -4,6 +4,7 @@ plugins {
     id("kotlin-parcelize")
     id("androidx.navigation.safeargs")
     id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -44,26 +45,26 @@ android {
 
 dependencies {
     //loading button
-    implementation ("br.com.simplepass:loading-button-android:2.2.0")
+    implementation(libs.progressbutton)
 
     //Glide
-    implementation ("com.github.bumptech.glide:glide:4.13.")
+    implementation (libs.glide)
 
     //circular image
-    implementation ("de.hdodenhof:circleimageview:3.1.0")
+    implementation (libs.circleimageview)
 
-    //viewpager2 indicator
-    implementation ("io.github.vejei.viewpagerindicator:viewpagerindicator:1.0.0-alpha.1")
+    //viewPagerIndicator
+    implementation(libs.dotsindicator)
 
     //stepView
-    implementation ("com.shuhart.stepview:stepview:1.5.1")
+    implementation (libs.stepview)
 
     //Android Ktx
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.4.2")
+    implementation (libs.androidx.navigation.fragment.ktx)
 
     //Dagger hilt
-    implementation ("com.google.dagger:hilt-android:2.38.1")
-    kapt ("com.google.dagger:hilt-compiler:2.38.1")
+    implementation (libs.hilt.android)
+    kapt (libs.hilt.compiler)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
